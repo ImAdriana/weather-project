@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>API - Clima</title>
+
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/tailwind.min.css" rel="stylesheet" />
+    </head>
+    <!-- min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden -->
+    <body class="min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden">
+        <div class="container mx-auto">
+            <h1
+                id="titulo"
+                class="text-4xl mt-12 text-white font-bold text-center">
+                WEATHER
+            </h1>
+            <hr class="border-gray-500" />
+            <div class="max-w-lg mx-auto">
+                <div class="p-6 mt-10">
+                    <!-- Se muestra el resultado de la consulta -->
+                    <div id="resultado">
+                        <p class="text-center text-white font-bold mt-6">
+                            Introduce tu ciudad y país
+                        </p>
+                    </div>
+                </div>
+
+                <form
+                    id="formulario"
+                    class="max-w-sm mx-auto"
+                    action="#"
+                    method="POST">
+                    <div class="mt-5">
+                        <input
+                            type="text"
+                            id="ciudad"
+                            name="cuidad"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3"
+                            placeholder="Escribe tu ciudad" />
+                    </div>
+                    <div class="mt-5">
+                        <select
+                            id="pais"
+                            class="block w-full mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 p-3">
+                            <option disabled selected value="">
+                                Elige el país
+                            </option>
+                            <!-- La API requiere el valor de dos digítos -->
+                            <option value="AR">Argentina</option>
+                            <option value="CO">Colombia</option>
+                            <option value="CR">Costa Rica</option>
+                            <option value="ES">España</option>
+                            <option value="US">Estados Unidos</option>
+                            <option value="MX">México</option>
+                            <option value="PE">Perú</option>
+                        </select>
+                    </div>
+
+                    <input
+                        type="submit"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full p-3"
+                        value="Obtener" />
+                </form>
+            </div>
+        </div>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
